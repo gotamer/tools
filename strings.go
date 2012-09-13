@@ -1,6 +1,7 @@
 // strings
 package tools
 
+// Reverses a string
 func Reverse(s string) string {
 	b := []byte(s)
 	n := ""
@@ -9,4 +10,3 @@ func Reverse(s string) string {
 	}
 	return string(n)
 }
-

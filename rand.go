@@ -48,6 +48,7 @@ func SRand(min, max int, readable bool) string {
 	return string(buf)
 }
 
+// Shuffles the string
 func Shuffle(s string) string {
 	l := len(s)
 	b := []byte(s)
