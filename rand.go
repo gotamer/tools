@@ -1,4 +1,4 @@
-// rand number, random strings
+// rand number, random strings, Shuffle, Reverse
 package tools
 
 import (

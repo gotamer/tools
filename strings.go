@@ -1,4 +1,3 @@
-// strings
 package tools
 
 // Reverses a string
