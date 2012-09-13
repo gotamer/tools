@@ -47,3 +47,13 @@ func SRand(min, max int, readable bool) string {
 	}
 	return string(buf)
 }
+
+func Shuffle(s string) string {
+	l := len(s)
+	b := []byte(s)
+	for i := len(b) - 1; i != 0; i-- {
+		r := rand.Intn(l)
+		b[i], b[r] = b[r], b[i]
+	}
+	return string(b)
+}

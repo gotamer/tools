@@ -40,3 +40,15 @@ func TestSRand(t *testing.T) {
 	println(SRand(6, 5, true))
 
 }
+
+func TestShuffle(t *testing.T) {
+	s := "Shuffle"
+	p := " "
+	println(s + p + Shuffle(s) + p + Shuffle(s) + p + Shuffle(s))
+}
+
+func TestReverse(t *testing.T) {
+	s := "Reverse"
+	p := " "
+	println(s + p + Reverse(s))
+}
