@@ -1,4 +1,5 @@
-// rand number, random strings, Shuffle, Reverse
+// uid, rand number, random strings, Shuffle, Reverse
+// "bitbucket.org/gotamer/tools"
 package tools
 
 import (
@@ -23,9 +24,20 @@ func IRand(min, max int) int {
 	return rand.Intn(length)
 }
 
+func Uid(no int) string {
+	return SRand(no, no, false)
+}
+
+func Uid8() string {
+	return SRand(8, 8, false)
+}
+
+func Uid16() string {
+	return SRand(16, 16, false)
+}
+
 // generates a random string
 func SRand(min, max int, readable bool) string {
-
 	var length int
 	var char string
 
@@ -40,10 +52,10 @@ func SRand(min, max int, readable bool) string {
 	} else {
 		char = "ABCDEFHJLMNQRTUVWXYZabcefghijkmnopqrtuvwxyz23479"
 	}
-
+	cno := len(char) - 1
 	buf := make([]byte, length)
 	for i := 0; i < length; i++ {
-		buf[i] = char[rand.Intn(len(char)-1)]
+		buf[i] = char[rand.Intn(cno)]
 	}
 	return string(buf)
 }
